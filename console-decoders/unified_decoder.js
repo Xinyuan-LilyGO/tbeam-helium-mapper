@@ -61,3 +61,10 @@ function Decoder(bytes, port) {
 
   return decoded;
 }
+
+// Wrapper for ChirpStack V4:
+function decodeUplink(input) {
+  return { 
+      data: Decoder(input.bytes, input.fPort)
+  };   
+}
